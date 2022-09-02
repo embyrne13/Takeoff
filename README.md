@@ -8,7 +8,7 @@
 
 ---
 
-![Logo](images/TakeoffLogo.png)
+![Logo](Images/TakeoffLogo.png)
 
 ### **_Description_**
 
@@ -32,8 +32,8 @@ Welcome to Takeoff! You will be able to look and book flights. This is your futu
 
 ### **_Screenshots_**
 
-![Component Hierarchy Diagram](images/TakeoffCHD.png)
-![Entity Relationship Diagram](images/TakeoffERD.png)
+![Component Hierarchy Diagram](Images/TakeoffCHD.png)
+![Entity Relationship Diagram](Images/TakeoffERD.png)
 
 ---
 
