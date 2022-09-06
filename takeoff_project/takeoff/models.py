@@ -25,10 +25,9 @@ class Date(models.Model):
 class Flight(models.Model):
     origin = models.ForeignKey(Place, on_delete=models.CASCADE, related_name="departures")
     destination = models.ForeignKey(Place, on_delete=models.CASCADE, related_name="arrivals")
-    depart_day = models.ManyToManyField(Date, related_name="flight")
-    arrival_day = models.ManyToManyField(Date, related_name="flights")
-    depart_time = models.TimeField(auto_now=False, auto_now_add=False)
-    arrival_time = models.TimeField(auto_now=False, auto_now_add=False)
+    departDay = models.ManyToManyField(Date, related_name="flight")
+    departTime = models.TimeField(auto_now=False, auto_now_add=False)
+    arrivalTime = models.TimeField(auto_now=False, auto_now_add=False)
     airline = models.CharField(max_length=20)
     duration = models.DurationField(null=True)
 
@@ -48,10 +47,10 @@ class Ticket(models.Model):
     def __str__(self):
         return self.refNumber
 class Passenger(models.Model):
-    first_name = models.CharField(max_length=20, blank=True)
-    last_name = models.CharField(max_length=20, blank=True)
+    firstName = models.CharField(max_length=20, blank=True)
+    lastName = models.CharField(max_length=20, blank=True)
     passenger = models.ForeignKey(User, on_delete=models.CASCADE, related_name="flights")
     flight = models.ForeignKey(Flight, on_delete=models.CASCADE, related_name="passengers")
 
     def __str__(self):
-        return self.first_name
+        return self.firstName
